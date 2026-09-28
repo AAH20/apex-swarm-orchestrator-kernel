@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apex-swarm-orchestrator-kernel"
+version = "0.1.0"
+description = "Apex Hierarchical Swarm Orchestrator and Leader Agent Kernel featuring spectral graph clustering, MAP-Elites quality-diversity evolution, field-tailored evaluation weight tensors, BLS BFT threshold quorum, and O(N log N) hierarchical dispatch"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Ahmed Hassan", email = "ahmed@example.com" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: System :: Distributed Computing",
+]
+dependencies = []
+
+[project.scripts]
+swarm-orchestrator = "apex_swarm_orchestrator_kernel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["apex_swarm_orchestrator_kernel*"]
